@@ -1,3 +1,4 @@
 import app from './index';
 
-app.listen(app.get('env').port);
+const port = app.get('env').port;
+app.listen(port, () => console.log(`Ouvindo na porta ${port}`));
