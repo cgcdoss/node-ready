@@ -1,9 +1,11 @@
-class Controller {
+import { Request, Response } from "express";
 
-  public helloWorld(): string {
-    return 'Hello world';
+class ExampleController {
+
+  public async getDefault(req: Request, res: Response): Promise<Response> {
+    return res.status(200).json({ msg: 'Hello world' });
   }
 
 }
 
-export default new Controller();
+export default new ExampleController();

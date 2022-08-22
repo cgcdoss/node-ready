@@ -2,6 +2,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import exampleRoute from './routes/example.route';
+import staticRoute from './routes/static.route';
 
 class App {
   private _app = express();
@@ -25,6 +26,7 @@ class App {
 
   private _setRoutes(): void {
     this._app.use(exampleRoute); // ou this._app.use('/example', exampleRoute);
+    this._app.use(staticRoute);
   }
 
   get app(): express.Application {
