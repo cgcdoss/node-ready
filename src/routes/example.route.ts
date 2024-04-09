@@ -5,7 +5,8 @@ class Routes {
   public routes = Router();
 
   constructor() {
-    this.routes.post('/', exampleController.getDefault);
+    this.routes.get('/example', exampleController.getExample);
+    this.routes.post('/example', exampleController.getExample);
   }
 
 }
